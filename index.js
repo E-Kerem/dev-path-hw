@@ -39,9 +39,10 @@ app.get("/messages/:hashedMessage", async (req, res) => {
 
 
 
-let server = "https://www.dev-path-rdzrs0jxm-e-kerem.vercel.app/"
-server = "dev-path-hw.vercel.app"
-const local = 8080
-app.listen(server, () => {
-    console.log("server has started on port 8080");
+// let server = "https://www.dev-path-rdzrs0jxm-e-kerem.vercel.app/"
+// server = "dev-path-hw.vercel.app"
+// const local = 8080
+const PORT = process.env.port || 8080
+app.listen(PORT, () => {
+    console.log("server has started on port " + PORT);
 });
