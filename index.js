@@ -7,6 +7,10 @@ app.use(express.json()); //req.body
 
 let map = {}
 
+app.get("/", async (req, res) => {
+    res.json({ msg: "hello" })
+})
+
 app.post("/messages", async (req, res) => {
     try {
         const { message } = req.body;
